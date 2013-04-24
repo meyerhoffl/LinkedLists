@@ -58,7 +58,23 @@ class LinkedList
   end
 
 
-  def to_s
+  # def to_s
+  #   if @first_item.nil?
+  #     "| |"
+  #   else
+  #     current_item = @first_item
+  #     payloads = ""
+  #     self.size.times do
+  #     payloads += " "
+  #     payloads += current_item.payload
+  #     payloads += "," unless current_item.last?
+  #     current_item = current_item.next_list_item
+  #   end
+  #   "|#{payloads} |"
+  #   end
+  # end
+
+    def to_s
     if @first_item.nil?
       "| |"
     else
@@ -74,6 +90,37 @@ class LinkedList
     end
   end
 
+
+  # def indexOf(target)
+  #   index = 0
+  #   item = @first_item
+  #   return nil if @first_item.nil?
+  #   return nil if item.payload.nil?
+  #     until item.nil?
+  #       if target == item.payload
+  #           return index
+  #       else
+  #         item = item.next_list_item
+  #         index += 1
+  #       end
+  #     end
+  # end
+
+
+  def indexOf(target)
+    index = 0
+    item = @first_item
+    return nil if @first_item.nil?
+    until item.nil?
+      if target == item.payload
+        return index
+      else
+        item = item.next_list_item
+        index += 1
+      end
+    end
+  end
+
   # ========= Bonus ========== #
 
   def [](payload)
@@ -83,6 +130,18 @@ class LinkedList
   end
 
   def remove(n)
+  end
+
+  # ========= Sorting Exercise ========== #
+
+  def sorted?
+  end
+
+  def sort
+  end
+
+  # This is a helper I implemented
+  def swap_with_next i
   end
 
 end
