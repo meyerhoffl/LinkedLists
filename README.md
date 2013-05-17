@@ -1,4 +1,4 @@
 LinkedLists
 ===========
 
-Linked Lists
+This is my first Ruby project for the Nashville Software School.
